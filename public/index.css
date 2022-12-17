@@ -1,0 +1,200 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.title{
+    background-color: rgb(134, 66, 161);
+    width:100%;
+    height: 10vh;
+    text-align: center;
+    color: rgb(135, 224, 40);
+
+}
+
+.currentRoom{
+    text-align: left;
+    margin-left: 10px;
+    font-size: 30px;
+    margin-top: 30px;
+    position: relative;
+    color: rgb(0, 89, 255);
+}
+.chatType{
+    position: relative;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 25px;
+    color:rgb(119, 0, 255);
+
+}
+.userJoined{
+   text-align: right;
+   width: 20%;
+   height: 20%;
+   min-width: 40px;
+   min-height: 40px;
+   position: fixed;
+   top: 80px;
+   right: 8px;
+   background-color: antiquewhite;
+   opacity: 0.2;
+   overflow-y: scroll;
+   animation-duration: 4s;
+   animation-name: userJoining;
+   animation-timing-function: linear;
+
+}
+@keyframes userJoining{
+    0%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 0.2;
+    }
+}
+.userJoined:hover{
+    opacity: 0.8;
+}
+.chat{
+    height: 350px;
+    background-color: rgb(163, 244, 244);
+    font-size: 20px;
+    overflow-x: hidden;
+   
+}
+#messageList{
+    overflow-y: scroll;
+    display: block;
+}
+.typeMessage{
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 20px;
+   
+}
+.typeMessage textarea{
+    width: 60%;
+    height: 60px;
+    text-align: start;
+    font-size: 20px;
+    border-width: 3px;
+    border-radius: 10px;
+    color: rgb(74, 80, 80);
+    border-style: dashed;
+    float: left;
+
+}
+.typeMessage textarea:hover{
+    height: 65px;
+    font-size: 23px;
+}
+.typeMessage button{
+    
+    padding: 9px 12px 9px 12px;
+    border-radius: 50%;
+    margin-left: 5px;
+    
+    margin-right: 5px;
+    background-color: rgb(116, 112, 121);
+    color: aliceblue;
+    border-style:hidden;
+
+}
+.typeMessage button:hover{
+    
+    border-radius: 40%;
+
+}
+.typeMessage label{
+ position: relative;
+ bottom: 15px;
+}
+
+.messages{
+    background-color: antiquewhite;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    display: block;
+    min-width: 100px;
+    margin-top: 10px;
+    margin-left: 7%;
+    margin-right: 7%;
+    max-width: 60%;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.messages p{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: rgb(0, 128, 255);
+}
+.messages h5{
+ font-weight: normal;
+ font-size: 18px;
+ background-image: linear-gradient(to top,rgb(231, 202, 202),rgb(237, 147, 216));
+ padding: 5px 10px 5px 10px;
+ color: rgb(51, 52, 53);
+ border-top-right-radius: 20px;
+ border-bottom-left-radius: 20px;
+
+}
+
+
+.container{
+    display: inline-block;
+    width: 100%;
+}
+#cameraIcon{
+    font-size: 50px;
+    background-color: rgb(81, 79, 79);
+    opacity: 1;
+    margin-bottom: 3px;
+    border-radius: 30%;
+    padding: 3px 3px 3px 3px;
+}
+#cameraIcon:hover{
+   
+    animation: camera 1s alternate;
+}
+#send:hover{
+    animation: camera 0.5s linear;
+}
+@keyframes camera{
+    0%{
+       opacity: 1;
+    }
+    50%{
+        opacity:0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.messages img:active{
+  min-width: 300px;
+  min-height: 300px;
+  width: 100%;
+  height: 100%;
+  max-width: 100vh;
+  max-height: 100vh;
+  position: fixed;
+  display: block;
+  top:0px;
+  right: 0px;
+  z-index: 5;
+}
+.container h5:active{
+    font-size: 60px;
+    width: 100%;
+    height: 100%;
+    max-width: 100vh;
+    max-height: 100vh;
+    position: fixed;
+    display: block;
+    top:0px;
+    right: 0px;
+    z-index: 5;
+}

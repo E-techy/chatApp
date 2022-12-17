@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   body{
+    margin: 0%;
+   }
+    .main{
+        background-image: linear-gradient(to top,rgb(212, 27, 27),rgb(118, 118, 206));
+        width: 100%;
+        height: 100vh;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 30px;
+       margin: 0%;
+    }
+    .inputBox{
+        width: 80%;
+        min-width: 200px;
+        max-width: 450px;
+        height: 45px;
+        border-radius: 10px;
+        font-size: 30px;
+    }
+    .inputBox:hover{
+        height: 55px;
+        width: 85%;
+    }
+    .label{
+        margin-bottom: 10px;
+        color: rgb(244, 244, 254);
+        font-size: 45px;
+    }
+    .main button{
+        padding: 8px 10px 8px 10px;
+        font-size: 35px;
+        border-radius: 20px;
+        border-style: none;
+        color: aliceblue;
+        background-color: rgb(42, 85, 215);
+    }
+    .main button:hover{
+        font-size: 40px;
+    }
+
+</style>
+<body>
+<div class="main">  
+    <br><br><br>
+<form>
+    <label for="name" class="label">Username</label><br>
+    <input type="text"  id="name" class="inputBox" name="username" width="200px" height="40px">
+    <br><br>
+    <label for="password" class="label">Password</label><br>
+    <input type="text" id="password" name="password" class="inputBox" width="200px" height="40px"><br>
+    <br>
+    <br>
+    <button type="submit">Submit</button>
+
+</form>
+</div>
+</body>
+<script src="/index.js"></script>
+
+</html>

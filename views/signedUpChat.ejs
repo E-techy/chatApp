@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="index.css">
+<script src="socket.js"></script>
+<body>
+   <div class="main">
+    <div id="activeUsers" style="position:fixed ;top: 20px; left: 30px; font-size: 20px; color: aliceblue;">
+        <p style="float: left;">Active Users: </p>
+        <p id="noOfUsers" style="float: left;">1</p>
+    </div>
+    <h1 id="username" style="position:fixed ;top: 20px; right: 30px; font-size: 30px; color: aliceblue;">
+            <%=username %> </h1>
+    <div class="title">
+        <h1>ChatMe</h1>
+        <br>
+        <h3>Welcome to the new world of chatting.</h3>
+    </div>
+    <div class="currentRoom">
+        You are in Public Chat
+    </div>
+    <hr style="width:300px; height:5px; background-color:rgb(84, 129, 166); border-end-end-radius: 5px;">
+    <div class="chatType">
+        <label for="publicChat">Chat Publicly</label>
+        <input type="radio" id="publicChat" name="typeOfChat" value="public" checked onclick="deleteChatsPublic()" >
+        <br>
+        <label for="privateChat">Chat Privately</label>
+        <input type="radio" id="privateChat" name="typeOfChat" value="private" onclick="deleteChatsPrivate()">
+        <br>
+    </div>
+    <hr style="width:100%; height:5px ; background-color:rgb(103, 84, 166) ; margin-top: 10px; border-radius: 50%;">
+    <div class="userJoined" id="userJoining">
+       <p> You have now joined the chat.</p>
+    </div>
+    <br>
+    <div class="chat">
+        <div id="messageList" >
+           <div class="container">
+              <div class="messages">
+                <div>
+                    <p>Developer</p>
+                </div>
+                <div>
+                    <h5>As a registered user, you must be humble to others. Now you name will be shown to the other users.</h5>
+                </div>
+              </div>
+           </div>
+       </div>
+    </div>
+    <div class="typeMessage">
+        <textarea type="text" id="message" placeholder="Type your message here."></textarea>
+        <button id="send"><img src="sendButtonIcon.png"></button> 
+        <label for="file" id="cameraIcon">📸</label>
+        <input id="file" title="Send image" type="file" style="display:none ;">
+    </div>
+   </div>
+</body>
+<script src="signedUpConnection.js"></script>
+<script>
+    var currentRoom=document.getElementById("currentRoom");
+    function deleteChatsPublic() {
+     document.getElementById('messageList').innerHTML=""
+     currentRoom.innerText="You are now in Public Chat."
+    }
+    function deleteChatsPrivate() {
+     document.getElementById('messageList').innerHTML=""  
+     currentRoom.innerText="You are now in Private Chat."    
+    }
+</script>
+</html>
